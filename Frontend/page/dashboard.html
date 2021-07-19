@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/library.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/jqueryui-flat/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/core/style.min.css"
+    />
+
+    <title>Detail</title>
+  </head>
+  <body>
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-6">
+          <h4 class="page-title">Dashboard</h4>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Dashboard
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-6">
+          <div class="text-right">
+            <small>Booking</small>
+            <h5 class="text-info">30</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="card card-hover">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="mr-4">
+                  <h5>Customer</h5>
+                  <h6 id="customerCount" class="mb-0">20</h6>
+                </div>
+                <div class="chart ml-auto">Active : 0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="card card-hover bg-red">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="mr-4">
+                  <h5>Driver</h5>
+                  <h6 id="driverCount" class="mb-0">10</h6>
+                </div>
+                <div class="chart ml-auto">Active : 0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="card card-hover bg-green">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="mr-4">
+                  <h5>Cars</h5>
+                  <h6 id="carCount" class="mb-0">20</h6>
+                </div>
+                <div class="chart ml-auto">Active : 0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <!-- title -->
+              <div class="d-md-flex align-items-center">
+                <div>
+                  <h4 class="card-title">Customer Requests</h4>
+                </div>
+                <div class="ml-auto">
+                  <div class="dl">
+                    <select class="custom-select">
+                      <option value="0" selected="">Monthly</option>
+                      <option value="1">Daily</option>
+                      <option value="2">Weekly</option>
+                      <option value="3">Yearly</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- title -->
+            </div>
+            <div
+              class="
+                table-responsive table-wrapper-scroll-y
+                my-custom-scrollbar
+              "
+            >
+              <table class="table v-middle">
+                <thead>
+                  <tr class="bg-light">
+                    <th class="border-top-0">Request Id</th>
+                    <th class="border-top-0">Customer Id</th>
+                    <th class="border-top-0">Car ID</th>
+                    <th class="border-top-0">Schedule ID</th>
+                    <th class="border-top-0">Status</th>
+                    <th class="border-top-0">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="requestData"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://bootadmin.org/scripts/vendor/bootstrap.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

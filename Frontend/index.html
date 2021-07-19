@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Car Rental Service</title>
+  </head>
+  <body>
+    <!-- //////////NAV BAR START////////// -->
+    <nav class="navbar navbar-expand-lg position-fixed navbar-dark w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Car Rent</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+
+            <li class="nav-item me-2">
+              <a id="login_link" class="nav-link"
+                ><i class="fas fa-user me-2"></i>Login</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex"></form>
+        </div>
+      </div>
+    </nav>
+    <!-- //////////NAV BAR RND////////// -->
+    <!-- //////////IMAGE SLIDER START////////// -->
+    <section id="home_image_slider">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="asserts/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Luxury Cars</h5>
+              <!-- <p>
+                Some representative placeholder content for the first slide.
+              </p> -->
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="asserts/serjan-midili-tOOeQv6O71g-unsplash.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Premium Cars</h5>
+              <!-- <p>
+                Some representative placeholder content for the second slide.
+              </p> -->
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="asserts/pexels-aayush-srivastava-1445653.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>General Cars</h5>
+              <!-- <p>
+                Some representative placeholder content for the third slide.
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- //////////IMAGE SLIDER END////////// -->
+    <!-- ////////////CAR STORE START//////////// -->
+    <section id="carstore" class="carstore section">
+      <div class="container-fluid">
+        <div class="filters">
+          <ul>
+            <li class="active" data-filter="*">All</li>
+            <li data-filter=".general">General</li>
+            <li data-filter=".preminum">Preminum</li>
+            <li data-filter=".luxury">Luxury</li>
+          </ul>
+        </div>
+        <div class="filters-content">
+          <div class="row grid">
+            <div class="col-sm-4 all general" id="Suzuki_Alto">
+              <div class="item">
+                <img src="asserts/store/alto.jpg" alt="Work 1" />
+                <div class="p-inner">
+                  <h5>Suzuki_Alto</h5>
+                  <div class="cat">
+                    Available
+                    <span class="badge bg-success">7</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all preminum" id="Toyota_Corolla">
+              <div class="item">
+                <img src="asserts/store/corolla.jpg" alt="Work 1" />
+                <div class="p-inner">
+                  <h5>Toyota_Corolla</h5>
+                  <div class="cat">
+                    Available
+                    <span class="badge bg-success">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all luxury">
+              <div class="item">
+                <img src="asserts/store/merc.jpg" alt="Work 1" />
+                <div class="p-inner">
+                  <h5>Mercedes Benz</h5>
+                  <div class="cat">
+                    Available <span class="badge bg-success">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all general">
+              <div class="item">
+                <img src="asserts/store/alto_k10.jpg" alt="Work 1" />
+                <div class="p-inner">
+                  <h5>Suzuki Alto K10</h5>
+                  <div class="cat">
+                    Available
+                    <span class="badge bg-success">8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all preminum">
+              <div class="item">
+                <img src="asserts/store/Bezza.jpg" alt="Work 1" />
+                <div class="p-inner">
+                  <h5>Perodua Bezza</h5>
+                  <div class="cat">
+                    Available
+                    <span class="badge bg-success">5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all luxury">
+              <div class="item">
+                <img
+                  src="asserts/store/toyota-premio-mk6-pic105411.jpg"
+                  alt="Work 1"
+                />
+                <div class="p-inner">
+                  <h5>Toyota Premio</h5>
+                  <div class="cat">
+                    Available <span class="badge bg-success">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ////////////CAR STORE END//////////// -->
+    <!-- ////////////CAR DETAILS START//////////// -->
+    <section id="car_details">
+      <div
+        class="modal fade"
+        id="Suzuki_Alto_modal"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="row d-flex flex-column">
+              <div class="col">
+                <!-- //////// -->
+                <div
+                  id="carouselExampleControls"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="asserts/store/modal/alto/front-view-118.jpg"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="asserts/store/modal/alto/front-left-view-angle-116.webp"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="asserts/store/modal/alto/dashboard-59.jpg"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- //////// -->
+              </div>
+              <div class="col">
+                <div class="d-flex justify-content-between p-2">
+                  <h4 class="text-center mb-2">Suzuki Alto</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="p-2">
+                  <h6 class="mb-2">Daliy Rate(Rs) :- 2500.00</h6>
+                  <h6 class="mb-2">Free Km for day:- 100</h6>
+                  <h6 class="mb-2">Monthly Rate(Rs):- 64,350.00</h6>
+                  <h6 class="mb-2">Free Km for month:- 2400</h6>
+                  <h6 class="mb-2">Price per Extra Km(Rs):- 30.00</h6>
+                </div>
+                <div class="modal-footer p-0">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button id="booking" type="button" class="btn btn-success">
+                    Book<i class="fas ms-2 fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ////////////CAR DETAILS END//////////// -->
+
+    <!-- //// -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

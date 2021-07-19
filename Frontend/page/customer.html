@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/library.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/jqueryui-flat/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/core/style.min.css"
+    />
+    <link rel="stylesheet" href="../css/customer.css" />
+
+    <title>Customer</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md-4">
+          <div class="row">
+            <div class="col">
+              <form id="userRegData">
+                <div class="row">
+                  <div class="col text-center">
+                    <h5 class="mt-2">Register</h5>
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col mt-2">
+                    <input
+                      id="email"
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      placeholder="Email Adderss"
+                    />
+                  </div>
+                </div>
+                <!-- //////NIC//// -->
+                <div class="row align-items-center mt-4">
+                  <div class="col-6">
+                    <input
+                      id="nicnumber"
+                      type="text"
+                      class="form-control"
+                      placeholder="NIC"
+                      name="nic"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <div class="file_chooser_style">
+                      <label
+                        id="nic_lable"
+                        class="file_chooser_lable_style btn m-0"
+                        for="nic_files"
+                        >Upload NIC</label
+                      >
+                      <input
+                        id="nic_files"
+                        name="nic_file"
+                        style="visibility: hidden"
+                        type="file"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- //LICENSE// -->
+                <div class="row align-items-center mt-4">
+                  <div class="col-6">
+                    <input
+                      id="licensenumber"
+                      type="text"
+                      class="form-control"
+                      placeholder="License"
+                      name="license"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <div class="file_chooser_style">
+                      <label
+                        id="license_lable"
+                        class="file_chooser_lable_style btn m-0"
+                        for="license_files"
+                        >Upload License</label
+                      >
+                      <input
+                        id="license_files"
+                        name="license_file"
+                        style="visibility: hidden"
+                        type="file"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                  <div class="col mt-2">
+                    <input
+                      id="address"
+                      type="text"
+                      class="form-control"
+                      name="address"
+                      placeholder="Address"
+                    />
+                  </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                  <div class="col mt-2">
+                    <input
+                      id="contact"
+                      type="text"
+                      class="form-control"
+                      name="tel"
+                      placeholder="Contact"
+                    />
+                  </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                  <div class="col mt-2">
+                    <input
+                      id="newpassword"
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                  <div class="col mt-2">
+                    <input
+                      id="confirmpassword"
+                      type="password"
+                      class="form-control"
+                      placeholder="Confirm Password"
+                    />
+                  </div>
+                </div>
+              </form>
+              <h6 id="passwordmatcherro"></h6>
+              <button id="regBtn" class="btn w-100 mt-4"></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-md-8">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <!-- <div class="card-body"> -->
+                <!-- title -->
+                <!-- <div class="d-md-flex align-items-center">
+                    <div>
+                      <h4 class="card-title">Customers</h4>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="dl">
+                        <select class="custom-select">
+                          <option value="0" selected="">Monthly</option>
+                          <option value="1">Daily</option>
+                          <option value="2">Weekly</option>
+                          <option value="3">Yearly</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div> -->
+                <!-- title -->
+                <!-- </div> -->
+                <div
+                  class="
+                    table-responsive table-wrapper-scroll-y
+                    my-custom-scrollbar
+                  "
+                >
+                  <table class="table v-middle">
+                    <thead>
+                      <tr class="bg-light">
+                        <th class="border-top-0">E-mail</th>
+                        <th class="border-top-0">Password</th>
+                        <th class="border-top-0">Address</th>
+                        <th class="border-top-0">NIC</th>
+                        <th class="border-top-0">license</th>
+                        <th class="border-top-0">Contact</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- //////////////////////////////// -->
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://bootadmin.org/scripts/vendor/bootstrap.min.js"></script>
+    <script src="../js/customer.js"></script>
+  </body>
+</html>

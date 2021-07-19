@@ -1,0 +1,15 @@
+.my-custom-scrollbar {
+  position: relative;
+  height: 304px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+#homeIcon i {
+  font-size: 20px;
+}
+
+#homeIcon:hover {
+  background: hsl(0, 0%, 100%, 0.2);
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/library.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/vendor/jqueryui-flat/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://bootadmin.org/style/core/style.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body id="landing" class="sidebar-open">
+    <div class="loading">
+      <div class="loading-center">
+        <img src="https://bootadmin.org/images/loading/map.gif" alt="Loading" />
+      </div>
+    </div>
+
+    <div class="page-container animsition">
+      <div id="dashboardPage">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5 hidden-xs">
+                <div class="logo">
+                  <a href="/">
+                    <span class="logo-emblem"
+                      ><img
+                        src="https://bootadmin.org/images/boot.png"
+                        alt="BA"
+                    /></span>
+                    <span class="logo-full">Car Rent</span>
+                  </a>
+                </div>
+                <a href="#" class="menu-toggle wave-effect">
+                  <i class="feather icon-menu"></i>
+                </a>
+              </div>
+              <div class="col-md-7 text-right">
+                <ul>
+                  <!-- Notification Menu -->
+                  <li class="btn-group notification">
+                    <a
+                      href="javascript:;"
+                      class="btn dropdown-toggle wave-effect"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="feather icon-bell"
+                        ><span class="notification-count">1</span></i
+                      >
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>
+                        <a href="#" class="wave-effect">
+                          <span class="avatar">
+                            <img
+                              src="https://bootadmin.org/images/demo/profile.png"
+                              alt="Mr. Chu"
+                            />
+                          </span>
+                          <span class="name">sonalsithara2352@gmail.com</span>
+                          <span class="message">Send Request</span>
+                          <span class="time">45 min</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/notification"
+                          class="dropdown-item all-notifications wave-effect"
+                          >See more messages
+                          <i class="feather icon-arrow-down"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../index.html" id="homeIcon" class="p-4">
+                      <i class="feather icon-home"></i>
+                    </a>
+                  </li>
+                  <li class="mobile-menu-toggle">
+                    <a href="#" class="menu-toggle wave-effect">
+                      <i class="feather icon-menu"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Side Bar -->
+        <div class="sidebar">
+          <div class="logo">
+            <a id="dashboard">
+              <span class="logo-emblem"
+                ><img
+                  src="https://img.icons8.com/android/24/000000/car.png"
+                  alt="BA"
+              /></span>
+              <span class="logo-full">Car Rent</span>
+            </a>
+          </div>
+          <ul id="sidebarCookie">
+            <li class="spacer"></li>
+            <li class="title">
+              <i class="feather icon-more-horizontal"></i>
+              <span class="menu-title">Main</span>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link wave-effect collapsed wave-effect"
+                data-parent="#sidebarCookie"
+                data-toggle="collapse"
+                href="#navDashboard"
+                aria-expanded="false"
+                aria-controls="page-dashboards"
+              >
+                <i class="feather icon-grid"></i>
+                <span class="menu-title">Dashboard</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+              </a>
+              <div class="collapse" id="navDashboard">
+                <ul class="flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-layout"></i>
+                      <span class="menu-title">Daily Summary</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-shopping-bag"></i>
+                      <span class="menu-title">Income</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link wave-effect collapsed"
+                data-parent="#sidebarCookie"
+                data-toggle="collapse"
+                href="#navElements"
+                aria-expanded="false"
+                aria-controls="page-elements"
+              >
+                <i class="feather icon-layout"></i>
+                <span class="menu-title">Manage Customer</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+              </a>
+              <div class="collapse" id="navElements">
+                <ul class="flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect" id="addCustomer">
+                      <i class="feather icon-bold"></i>
+                      <span class="menu-title">Add Customer</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect" id="updateCustomer">
+                      <i class="feather icon-image"></i>
+                      <span class="menu-title">Update Customer</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect" id="deleteCustomer">
+                      <i class="feather icon-grid"></i>
+                      <span class="menu-title">Delete Customer</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link wave-effect collapsed"
+                data-parent="#sidebarCookie"
+                data-toggle="collapse"
+                href="#navPageLayouts"
+                aria-expanded="false"
+                aria-controls="page-layouts"
+              >
+                <i class="feather icon-sidebar"></i>
+                <span class="menu-title">Manage Cars</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+              </a>
+              <div class="collapse" id="navPageLayouts">
+                <ul class="flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-layout"></i>
+                      <span class="menu-title">Add Car</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-bold"></i>
+                      <span class="menu-title">Update Car</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-pause"></i>
+                      <span class="menu-title">Search Car</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-copy"></i>
+                      <span class="menu-title">Delete Car</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link wave-effect collapsed"
+                data-parent="#sidebarCookie"
+                data-toggle="collapse"
+                href="#navMailbox"
+                aria-expanded="false"
+                aria-controls="page-mailbox"
+              >
+                <i class="feather icon-sidebar"></i>
+                <span class="menu-title">Manage Driver</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+              </a>
+              <div class="collapse" id="navMailbox">
+                <ul class="flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-inbox"></i>
+                      <span class="menu-title">Add Driver</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-mail"></i>
+                      <span class="menu-title">Update Driver</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-send"></i>
+                      <span class="menu-title">Search Driver</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-send"></i>
+                      <span class="menu-title">Delete Driver</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="title">
+              <i class="feather icon-more-horizontal"></i>
+              <span class="menu-title">Advance</span>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link wave-effect collapsed"
+                data-parent="#sidebarCookie"
+                data-toggle="collapse"
+                href="#manageadmin"
+                aria-expanded="false"
+                aria-controls="page-mailbox"
+              >
+                <i class="feather icon-mail"></i>
+                <span class="menu-title">Manage Admin</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+              </a>
+              <div class="collapse" id="manageadmin">
+                <ul class="flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-inbox"></i>
+                      <span class="menu-title">Add Admin</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-mail"></i>
+                      <span class="menu-title">Update Admin</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-send"></i>
+                      <span class="menu-title">Search Admin</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link wave-effect">
+                      <i class="feather icon-send"></i>
+                      <span class="menu-title">Delete Admin</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wave-effect nav-single">
+                <i class="feather icon-calendar"></i>
+                <span class="menu-title">Schedule</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wave-effect nav-single">
+                <i class="feather icon-calendar"></i>
+                <span class="menu-title">Payment</span>
+              </a>
+            </li>
+            <!-- ///// -->
+          </ul>
+        </div>
+
+        <main id="default"></main>
+      </div>
+    </div>
+
+    <!-- Le Javascript -->
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://bootadmin.org/scripts/vendor/bootstrap.min.js"></script>
+    <script src="https://bootadmin.org/scripts/vendor/library.min.js"></script>
+    <script src="https://bootadmin.org/scripts/core/main.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>
